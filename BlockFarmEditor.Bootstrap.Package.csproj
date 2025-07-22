@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="package.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="package.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlockFarmEditor.RCL\BlockFarmEditor.RCL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Definitions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\*.json" />
+  </ItemGroup>
+
+</Project>
