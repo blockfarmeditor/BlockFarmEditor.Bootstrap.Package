@@ -25,6 +25,11 @@ namespace BlockFarmEditor.Bootstrap.Package;
 
 internal class BootstrapColorConfig : IBlockFarmEditorConfig
 {
+    /// <summary>
+    /// Returns a list of Bootstrap color options for dropdowns.
+    /// This is used for various components like alerts, badges, buttons, etc.
+    /// </summary>
+    /// <returns></returns>
     public Task<IEnumerable<BlockFarmEditorConfigItem>> GetItems()
     {
         return
@@ -55,6 +60,11 @@ internal class BootstrapColorConfig : IBlockFarmEditorConfig
 
 internal class ModalSizeConfig : IBlockFarmEditorConfig
 {
+    /// <summary>
+    /// Returns a list of Bootstrap modal size options for dropdowns.
+    /// This is used for configuring the size of modals in the Block Farm Editor.
+    /// </summary>
+    /// <returns></returns>
     public Task<IEnumerable<BlockFarmEditorConfigItem>> GetItems()
     {
         return
@@ -81,6 +91,12 @@ internal class ModalSizeConfig : IBlockFarmEditorConfig
 
 internal class PlacementConfig : IBlockFarmEditorConfig
 {
+    /// <summary>
+    /// Returns a list of Bootstrap offcanvas placement options for dropdowns.
+    /// This is used for configuring the placement of offcanvas components in the Block Farm Editor.
+    /// The options include start, end, top, and bottom placements.
+    /// </summary>
+    /// <returns></returns>
     public Task<IEnumerable<BlockFarmEditorConfigItem>> GetItems()
     {
         return
@@ -106,6 +122,11 @@ internal class PlacementConfig : IBlockFarmEditorConfig
 
 internal class TabStyleConfig : IBlockFarmEditorConfig
 {
+    /// <summary>
+    /// Returns a list of Bootstrap tab styles for dropdowns.
+    /// This is used for configuring the appearance of tabs in the Block Farm Editor.
+    /// </summary>
+    /// <returns></returns>
     public Task<IEnumerable<BlockFarmEditorConfigItem>> GetItems()
     {
         return
@@ -130,6 +151,11 @@ internal class TabStyleConfig : IBlockFarmEditorConfig
 
 internal class JustificationConfig : IBlockFarmEditorConfig
 {
+    /// <summary>
+    /// Returns a list of Bootstrap tab justification options for dropdowns.
+    /// This is used for configuring the alignment of tabs in the Block Farm Editor.
+    /// </summary>
+    /// <returns></returns>
     public Task<IEnumerable<BlockFarmEditorConfigItem>> GetItems()
     {
         return

@@ -15,14 +15,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlockFarmEditor.RCL\BlockFarmEditor.RCL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Definitions\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Definitions\*.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BlockFarmEditor.RCL" Version="1.2.0" />
   </ItemGroup>
 
 </Project>
