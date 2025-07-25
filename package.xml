@@ -159,19 +159,6 @@
           <Description><![CDATA[Carousel slide content/description]]></Description>
           <Variations>Nothing</Variations>
         </GenericProperty>
-        <GenericProperty>
-          <Name>Dropdown</Name>
-          <Alias>dropdown</Alias>
-          <Key>71bf569b-68a6-442c-878b-57e5d1569a82</Key>
-          <Type>Umbraco.DropDown.Flexible</Type>
-          <Definition>0b6a45e7-44ba-430d-9da5-4e46060b9e03</Definition>
-          <Tab Alias="carouselItem">Carousel Item</Tab>
-          <SortOrder>3</SortOrder>
-          <Mandatory>False</Mandatory>
-          <LabelOnTop>False</LabelOnTop>
-          <Description><![CDATA[]]></Description>
-          <Variations>Nothing</Variations>
-        </GenericProperty>
       </GenericProperties>
       <Tabs>
         <Tab>
@@ -1493,7 +1480,7 @@
           <Key>0bb6a28b-6134-4506-91ea-03bceeff5e4f</Key>
           <Type>Umbraco.RichText</Type>
           <Definition>ca90c950-0aff-4e72-b976-a30b1ac57dad</Definition>
-          <Tab Alias="properties">Properties</Tab>
+          <Tab Alias="main/properties">Properties</Tab>
           <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
@@ -1507,7 +1494,15 @@
           <Key>b7f7b148-4442-4777-b3b0-7f24850bf514</Key>
           <Type>Group</Type>
           <Caption>Properties</Caption>
-          <Alias>properties</Alias>
+          <Alias>main/properties</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>81</Id>
+          <Key>78ea556b-a531-4501-a12e-84d0119c051a</Key>
+          <Type>Tab</Type>
+          <Caption>Main</Caption>
+          <Alias>main</Alias>
           <SortOrder>0</SortOrder>
         </Tab>
       </Tabs>
