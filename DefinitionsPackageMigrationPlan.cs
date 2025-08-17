@@ -1,4 +1,4 @@
-using BlockFarmEditor.RCL.Database.BlockFarmEditorDefinitions;
+using BlockFarmEditor.Umbraco.Database.BlockFarmEditorDefinitions;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Packaging;
 

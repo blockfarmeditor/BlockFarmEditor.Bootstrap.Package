@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Text.Json;
 using System.Reflection;
-using BlockFarmEditor.RCL.Library.Services;
-using BlockFarmEditor.RCL.Models;
 using Microsoft.Extensions.Options;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.IO;
@@ -12,6 +10,8 @@ using Umbraco.Cms.Core.Strings;
 using Umbraco.Cms.Infrastructure.Migrations;
 using Umbraco.Cms.Infrastructure.Packaging;
 using Microsoft.Extensions.Logging;
+using BlockFarmEditor.Umbraco.Library.Services;
+using BlockFarmEditor.Umbraco.Models;
 
 namespace BlockFarmEditor.Bootstrap.Package;
 
