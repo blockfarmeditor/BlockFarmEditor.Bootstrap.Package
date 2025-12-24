@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>11</Id>
+  <Key>79faf030-f91f-45fa-b7fa-5d8e614c6b2d</Key>
+  <ContentTypeAlias>listGroup</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/ListGroup.cshtml</ViewPath>
+  <Category>Blocks</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.8804885</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.8804885</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

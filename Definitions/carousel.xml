@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>9</Id>
+  <Key>b0b91135-acf3-4a1c-a2ce-9e99f1d67849</Key>
+  <ContentTypeAlias>carousel</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/Carousels.cshtml</ViewPath>
+  <Category>Blocks</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.8772816</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.8772817</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

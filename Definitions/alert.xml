@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>2</Id>
+  <Key>8a3542ba-a802-4d9a-ad9a-2b8d4e28b0d4</Key>
+  <ContentTypeAlias>alert</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/Alert.cshtml</ViewPath>
+  <Category>Blocks</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.8703274</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.8703274</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

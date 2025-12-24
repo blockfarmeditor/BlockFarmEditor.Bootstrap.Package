@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>6</Id>
+  <Key>aece227b-6b03-4fa1-82d4-db9613f6e8f2</Key>
+  <ContentTypeAlias>breadcrumbs</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/Breadcrumbs.cshtml</ViewPath>
+  <Category>Blocks</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.874164</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.8741642</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

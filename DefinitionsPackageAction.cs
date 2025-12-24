@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Text.Json;
 using System.Reflection;
+using System.Xml.Serialization;
 using Microsoft.Extensions.Options;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.IO;
@@ -35,48 +35,66 @@ internal class DefinitionsPackageAction(
         ImportPackage.FromEmbeddedResource<DefinitionsPackageAction>().Do();
 
         // Get embedded resources from the assembly
-        // These resources are expected to be JSON files defining BlockFarmEditor definitions
-        // The resources should be named in a specific format, e.g., Definitions.{alias}.json
+        // These resources are expected to be XML files defining BlockFarmEditor definitions
+        // The resources should be named in a specific format, e.g., Definitions.{alias}.xml
         // where {alias} is the alias of the definition
         // This will read each resource, deserialize it, and create or update the definitions in the database
         var assembly = Assembly.GetExecutingAssembly();
         var resourceNames = assembly.GetManifestResourceNames()
-            .Where(name => name.Contains("Definitions") && name.EndsWith(".json"));
+            .Where(name => name.Contains("Definitions") && name.EndsWith(".xml", StringComparison.OrdinalIgnoreCase));
 
         // Iterate through each resource name
         foreach (var resourceName in resourceNames)
         {
-            // Extract alias from resource name
-            var parts = resourceName.Split('.');
-            var alias = parts[^2]; // Second to last part (before .json)
-
-            // Read the embedded resource
-            await using var stream = assembly.GetManifestResourceStream(resourceName);
-            if (stream == null) continue;
-
-            using var reader = new StreamReader(stream);
-            var contents = await reader.ReadToEndAsync();
-
-            // Deserialize the JSON content into a BlockFarmEditorDefinitionDTO object
-            var dto = JsonSerializer.Deserialize<BlockFarmEditorDefinitionDTO>(contents);
-            if (dto == null) continue;
-
-            // check for an existing definition with the same alias
-            // If it exists, update it; if not, create a new one
-            var definition = await blockFarmEditorDefinitionService.GetByAliasAsync(Database, alias);
-            
-            // Gets the system user to set as the creator or updater of the definition
-            // This is necessary for auditing purposes and to ensure the definition has a valid user associated with it
-            var user = userService.GetUserById(-1);
-            if (definition != null)
+            try
             {
-                await blockFarmEditorDefinitionService.UpdateAsync(Database, definition.Id, dto.Type, dto.ViewPath, dto.Category, dto.Enabled, user?.Key ?? dto.UpdatedBy);
-                logger.LogInformation("Updated definition for alias: {Alias}", alias);
+                // Extract alias from resource name
+                var parts = resourceName.Split('.');
+                var alias = parts[^2]; // Second to last part (before .xml)
+
+                // Read the embedded resource
+                await using var stream = assembly.GetManifestResourceStream(resourceName);
+                if (stream == null)
+                {
+                    logger.LogWarning("Resource stream not found for {Resource}", resourceName);
+                    continue;
+                }
+
+                // Deserialize the XML content into a BlockFarmEditorDefinitionDTO object
+                var serializer = new XmlSerializer(typeof(BlockFarmEditorDefinitionDTO));
+                BlockFarmEditorDefinitionDTO? dto;
+                try
+                {
+                    dto = serializer.Deserialize(stream) as BlockFarmEditorDefinitionDTO;
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Failed to deserialize XML for {Resource}", resourceName);
+                    continue;
+                }
+                if (dto == null) continue;
+
+                // check for an existing definition with the same alias
+                // If it exists, update it; if not, create a new one
+                var definition = await blockFarmEditorDefinitionService.GetByAliasAsync(Database, alias);
+                
+                // Gets the system user to set as the creator or updater of the definition
+                // This is necessary for auditing purposes and to ensure the definition has a valid user associated with it
+                var user = userService.GetUserById(-1);
+                if (definition != null)
+                {
+                    await blockFarmEditorDefinitionService.UpdateAsync(Database, definition.Id, dto.Type, dto.ViewPath, dto.Category, dto.Enabled, user?.Key ?? dto.UpdatedBy);
+                    logger.LogInformation("Updated definition for alias: {Alias}", alias);
+                }
+                else
+                {
+                    await blockFarmEditorDefinitionService.CreateAsync(Database, dto, user?.Key ?? dto.UpdatedBy);
+                    logger.LogInformation("Created new definition for alias: {Alias}", alias);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await blockFarmEditorDefinitionService.CreateAsync(Database, dto, user?.Key ?? dto.UpdatedBy);
-                logger.LogInformation("Created new definition for alias: {Alias}", alias);
+                logger.LogError(ex, "Error processing embedded definition resource {Resource}", resourceName);
             }
         }
     }

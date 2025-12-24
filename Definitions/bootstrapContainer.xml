@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>4</Id>
+  <Key>0396f204-fcb4-4b8c-a8c1-5938cfdf3cd0</Key>
+  <ContentTypeAlias>bootstrapContainer</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Containers/BootstrapContainer.cshtml</ViewPath>
+  <Category>Containers</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.8716368</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.8716368</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

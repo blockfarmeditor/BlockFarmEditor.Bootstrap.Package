@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockFarmEditorDefinitionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>14</Id>
+  <Key>d5559f39-b1db-4849-a6c4-a24c27568877</Key>
+  <ContentTypeAlias>richTextEditor</ContentTypeAlias>
+  <Type>partial</Type>
+  <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/RichTextEditor.cshtml</ViewPath>
+  <Category>Blocks</Category>
+  <Enabled>true</Enabled>
+  <CreatedAt>2025-12-24T04:25:30.8832059</CreatedAt>
+  <UpdatedAt>2025-12-24T04:25:30.883206</UpdatedAt>
+  <CreatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</CreatedBy>
+  <UpdatedBy>1e70f841-c261-413b-abb2-2d68cdb96094</UpdatedBy>
+</BlockFarmEditorDefinitionDTO>

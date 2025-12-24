@@ -13,10 +13,6 @@
   <ItemGroup>
     <EmbeddedResource Include="package.xml" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Definitions\" />
-  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Definitions\*.json" />
   </ItemGroup>
