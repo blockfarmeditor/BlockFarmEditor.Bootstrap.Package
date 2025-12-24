@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <EmbeddedResource Include="Definitions\*.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PageBuilder\BlockFarmEditor.Umbraco\BlockFarmEditor.Umbraco.csproj" />
+    <ProjectReference Include="..\BlockFarmEditor.Umbraco\BlockFarmEditor.Umbraco.csproj" />
   </ItemGroup>
 
 </Project>
