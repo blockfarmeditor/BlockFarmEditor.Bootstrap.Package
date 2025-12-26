@@ -5,7 +5,7 @@
   <ContentTypeAlias>accordion</ContentTypeAlias>
   <Type>partial</Type>
   <ViewPath>~/Views/Partials/BlockFarmEditor/Blocks/Accordion.cshtml</ViewPath>
-  <Category>Accordian1</Category>
+  <Category>Blocks</Category>
   <Enabled>true</Enabled>
   <CreatedAt>2025-12-24T04:25:30.8671373</CreatedAt>
   <UpdatedAt>2025-12-24T04:25:30.8671377</UpdatedAt>

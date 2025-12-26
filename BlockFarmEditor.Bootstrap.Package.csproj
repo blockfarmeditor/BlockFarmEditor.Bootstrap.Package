@@ -7,10 +7,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Definitions\accordion.xml" />
+    <None Remove="Definitions\alert.xml" />
+    <None Remove="Definitions\badge.xml" />
+    <None Remove="Definitions\bootstrapContainer.xml" />
+    <None Remove="Definitions\bootstrapRow.xml" />
+    <None Remove="Definitions\breadcrumbs.xml" />
+    <None Remove="Definitions\button.xml" />
+    <None Remove="Definitions\card.xml" />
+    <None Remove="Definitions\carousel.xml" />
+    <None Remove="Definitions\collapse.xml" />
+    <None Remove="Definitions\listGroup.xml" />
+    <None Remove="Definitions\modal.xml" />
+    <None Remove="Definitions\offcanvas.xml" />
+    <None Remove="Definitions\richTextEditor.xml" />
+    <None Remove="Definitions\tabs.xml" />
     <None Remove="package.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Definitions\accordion.xml" />
+    <EmbeddedResource Include="Definitions\alert.xml" />
+    <EmbeddedResource Include="Definitions\badge.xml" />
+    <EmbeddedResource Include="Definitions\bootstrapContainer.xml" />
+    <EmbeddedResource Include="Definitions\bootstrapRow.xml" />
+    <EmbeddedResource Include="Definitions\breadcrumbs.xml" />
+    <EmbeddedResource Include="Definitions\button.xml" />
+    <EmbeddedResource Include="Definitions\card.xml" />
+    <EmbeddedResource Include="Definitions\carousel.xml" />
+    <EmbeddedResource Include="Definitions\collapse.xml" />
+    <EmbeddedResource Include="Definitions\listGroup.xml" />
+    <EmbeddedResource Include="Definitions\modal.xml" />
+    <EmbeddedResource Include="Definitions\offcanvas.xml" />
+    <EmbeddedResource Include="Definitions\richTextEditor.xml" />
+    <EmbeddedResource Include="Definitions\tabs.xml" />
     <EmbeddedResource Include="package.xml" />
   </ItemGroup>
   <ItemGroup>
