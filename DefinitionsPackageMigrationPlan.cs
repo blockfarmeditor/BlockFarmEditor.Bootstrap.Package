@@ -1,6 +1,5 @@
+using BlockFarmEditor.Umbraco.Core.DTO;
 using BlockFarmEditor.Umbraco.Database.BlockFarmEditorDefinitions;
-using BlockFarmEditor.Umbraco.Database.BlockFarmEditorLayouts;
-using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Packaging;
 
 namespace BlockFarmEditor.Bootstrap.Package;
@@ -22,9 +21,10 @@ internal class DefinitionsPackageMigrationPlan : PackageMigrationPlan
     protected override void DefinePlan()
     {
         // Defines the migration steps for the BlockFarmEditor definitions package
-        // The first step is to create the BlockFarmEditorDefinitionTable.  This should already exist, but this ensures it is created if it does not.
+        // This migration depends on the main BlockFarmEditor migration to be completed first
+        // Starting from the final state of the main BlockFarmEditor migration ensures dependencies are met
         From($"")
-        .To<BlockFarmEditorDefinitionTable>($"{BlockFarmEditorDefinitionTable.TableName}-db")
+        .To<BlockFarmEditorDefinitionTable>($"{BlockFarmEditorDefinitionDTO.TableName}-db")
         .To<DefinitionsPackageAction>(new Guid("a1b2c3d4-e5f6-7890-abcd-ef1234567890"));
     }
 

@@ -1,7 +1,6 @@
-﻿using BlockFarmEditor.Umbraco.Library.Attributes;
-using BlockFarmEditor.Umbraco.Models.ConfigModels;
-using BlockFarmEditor.Umbraco.Models;
-using BlockFarmEditor.Bootstrap.Package;
+﻿using BlockFarmEditor.Bootstrap.Package;
+using BlockFarmEditor.Umbraco.Core.Attributes;
+using BlockFarmEditor.Umbraco.Core.Models.ConfigModels;
 
 [assembly: BlockFarmEditorConfiguration("alert", "alertType", typeof(BootstrapColorConfig))]
 [assembly: BlockFarmEditorConfiguration("badge", "badgeColor", typeof(BootstrapColorConfig))]

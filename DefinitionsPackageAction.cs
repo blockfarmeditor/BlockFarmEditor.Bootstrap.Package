@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BlockFarmEditor.Umbraco.Core.DTO;
+using BlockFarmEditor.Umbraco.Core.Interfaces;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 using System.Xml.Serialization;
-using Microsoft.Extensions.Options;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
@@ -9,9 +11,6 @@ using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Strings;
 using Umbraco.Cms.Infrastructure.Migrations;
 using Umbraco.Cms.Infrastructure.Packaging;
-using Microsoft.Extensions.Logging;
-using BlockFarmEditor.Umbraco.Library.Services;
-using BlockFarmEditor.Umbraco.Models;
 
 namespace BlockFarmEditor.Bootstrap.Package;
 
