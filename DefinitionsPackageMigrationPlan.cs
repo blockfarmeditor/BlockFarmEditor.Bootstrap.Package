@@ -1,5 +1,3 @@
-using BlockFarmEditor.Umbraco.Core.DTO;
-using BlockFarmEditor.Umbraco.Database.BlockFarmEditorDefinitions;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Packaging;
 
