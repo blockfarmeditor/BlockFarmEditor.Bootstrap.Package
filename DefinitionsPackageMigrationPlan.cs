@@ -1,3 +1,5 @@
+using BlockFarmEditor.Umbraco.Core.Database.BlockFarmEditorDefinitions;
+using BlockFarmEditor.Umbraco.Core.DTO;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Packaging;
 
@@ -24,6 +26,8 @@ internal class DefinitionsPackageMigrationPlan : PackageMigrationPlan
         // This migration can start from either empty state (fresh install) or after main migration
         // The DefinitionsPackageAction will handle checking if tables exist before proceeding
         From(string.Empty)
+        .To<BlockFarmEditorDefinitionTable>($"{BlockFarmEditorDefinitionDTO.TableName}-db")
+        .To<BlockFarmEditorDefinitionTableDeletedAt>($"{BlockFarmEditorDefinitionTableDeletedAt.ColumnName}-db-column")
         .To<DefinitionsPackageAction>(new Guid("a1b2c3d4-e5f6-7890-abcd-ef1234567890"));
     }
 
@@ -31,5 +35,5 @@ internal class DefinitionsPackageMigrationPlan : PackageMigrationPlan
     /// Indicates whether the current state of the package should be ignored during migration.
     /// This is set to true to allow the migration to run regardless of current state.
     /// </summary>
-    public override bool IgnoreCurrentState => true;
+    public override bool IgnoreCurrentState => false;
 }

@@ -29,13 +29,6 @@ internal class DefinitionsPackageAction(
 {
     protected override async Task MigrateAsync()
     {
-        // Check if the required table exists before proceeding
-        if (!TableExists(BlockFarmEditorDefinitionDTO.TableName))
-        {
-            logger.LogWarning("BlockFarmEditor definitions table does not exist yet. Skipping bootstrap definitions migration. This will run again after the main migration completes.");
-            return;
-        }
-
         // Imports the main package into your Umbraco installation
         // This will create the necessary configurations for the Bootstrap blocks
         ImportPackage.FromEmbeddedResource<DefinitionsPackageAction>().Do();

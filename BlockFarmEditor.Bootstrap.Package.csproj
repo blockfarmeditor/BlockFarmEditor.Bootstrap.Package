@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlockFarmEditor.Umbraco.Core\BlockFarmEditor.Umbraco.Core.csproj" />
-    <ProjectReference Include="..\BlockFarmEditor.Umbraco\BlockFarmEditor.Umbraco.csproj" />
   </ItemGroup>
 
 </Project>
